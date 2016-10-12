@@ -71,3 +71,9 @@ var phrases = [
 "the avant-garde philosophy",
 "the withered self-representation"
 ];
+
+var colors = [
+    "#8B0000",
+    "#DA70D6",
+    "#00BFFF"  
+];
