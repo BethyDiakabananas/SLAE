@@ -23,7 +23,7 @@ var randomize = function() {
     $("#phrase").html(chooseRandom(phrases))                       
 }
 
-var apiKey = "JvTPWe4WsQO-xqX6Bts49qOiQ3j4i_leS5D7RiC66Ctu0pt_b_7t-qPauiAU20IBP5jRti-ZNtZVfJ6jgVN0atd1ZO9AG0hyElkJTeiZHQ5YyH4JLfqoDhJuCAi9xMGxDmdjID71WFNi2YHCir9MJg8fpQ33LqgyPubA3E9FtLMgSoz2SdsSEYirf_T_7O7drRm1Qd2JkkuiTuIIiJDsCB_5AgMBVmiB1uwimUSRvI0=";
+var apiKey = "";
 
 var chooseRandom = function(list){
     index = Math.floor(Math.random() * list.length)
