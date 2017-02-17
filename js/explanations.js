@@ -4,7 +4,7 @@ var randomize = function() {
     document.getElementById("img").style.height = h + "px";
     $(".filler-text").css("color", chooseRandom(colors));
     
-    $.ajaz({
+    $.ajax({
         url = "https://api.artsy.net:443/api/search?q=" + chooseRandom(artists),
         headers: {'X-Xapp-Token':apiToken},
         success: function(e) {
