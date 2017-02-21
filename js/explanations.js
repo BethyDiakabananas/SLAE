@@ -5,7 +5,7 @@ var randomize = function() {
     $(".filler-text").css("color", chooseRandom(colors));
     
     $.ajax({
-        url = "https://api.artsy.net:443/api/search?q=" + chooseRandom(artists),
+        url: "https://api.artsy.net:443/api/search?q=" + chooseRandom(artists),
         headers: {'X-Xapp-Token':apiKey},
         success: function(e) {
             html = "img class='img' src='";
