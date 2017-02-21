@@ -17,7 +17,7 @@ var randomize = function() {
             $(".img").html(html + link + htmlclose);
             $(".title").html(art.title);
             $(".description").html(art.description);
-        };
+        }
     });
     $("#description").html(chooseRandom(descriptions))
     $("#phrase").html(chooseRandom(phrases))                       
