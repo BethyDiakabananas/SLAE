@@ -1,4 +1,4 @@
-var randomize = function() {
+var randomize = function () {
     var w = window.innerWidth;
     var h = window.innerHeight;
     document.getElementById("img").style.height = h + "px";
@@ -6,27 +6,28 @@ var randomize = function() {
     
     $.ajax({
         url: "https://api.artsy.net:443/api/search?q=" + chooseRandom(artists),
-        headers: {'X-Xapp-Token':apiKey},
+        headers: {'X-Xapp-Token':apiToken},
         success: function(e) {
-            html = "img class='img' src='";
-            htmlclose = "' />"
-            artist = e
+            html = "<img class='img' src='";
+            htmlclose = "' />";
+            artist = e;
             linkedList = artist._embedded.results;
             art = chooseRandom(linkedList);
-            link = art._links.thumbnail.href
+            link = art._links.thumbnail.href;
             $(".img").html(html + link + htmlclose);
             $(".title").html(art.title);
-            $(".description").html(art.description);
+            $(".description").html(art.description)
         }
     });
     $("#description").html(chooseRandom(descriptions))
     $("#phrase").html(chooseRandom(phrases))                       
 }
 
-var apiKey =  "JvTPWe4WsQO-xqX6Bts49sYSoxGdNEnOVU-GxPhDqHnGPMFSOa7Xhop8l-7DN7hOYAsq1lPD2uP1EBIs9sizM28Rerz_IBi862CVS69Nm3Q9t6nz5H-I8NzpOtkc5AV6I1tL8KpWNxQZ_ElrDzBIOad4OivamsImqsT0C9L5PH28BsEU5JZdYVnUmjxqnvYi1fuJTshponDc-N17h7JJdsvbynMgh24zbqesCzqRU2I=";
+var apiToken = "JvTPWe4WsQO-xqX6Bts49qOiQ3j4i_leS5D7RiC66Ctu0pt_b_7t-qPauiAU20IBP5jRti-ZNtZVfJ6jgVN0atd1ZO9AG0hyElkJTeiZHQ5YyH4JLfqoDhJuCAi9xMGxDmdjID71WFNi2YHCir9MJg8fpQ33LqgyPubA3E9FtLMgSoz2SdsSEYirf_T_7O7drRm1Qd2JkkuiTuIIiJDsCB_5AgMBVmiB1uwimUSRvI0=";
 
-var chooseRandom = function(list){
-    index = Math.floor(Math.random() * list.length)
-    return list[index]
+var chooseRandom = function (list) {
+    index = Math.floor(Math.random() * list.length);
+    return list[index];
 }
+
 
